@@ -8,8 +8,13 @@ CHANGE LOG
 
 0.0.2 (24/01/2021)
 -------------------
-- Added functions for encoding/decoding the RailFence/Zig-Zag cipher.
+- Added functions for encrypting/encrypting text in the RailFence/Zig-Zag cipher.
 
 0.0.3 (24/01/2021)
 -------------------
 - Added functions for encoding/decoding text in octal.
+
+0.1.0 (24/01/2021)
+-------------------
+- Fixed Bugs
+- Added functions for encoding/decoding text in ascii.
