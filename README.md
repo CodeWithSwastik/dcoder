@@ -14,16 +14,17 @@ PyPI: https://pypi.org/project/dcoder/
 
 The current list of functions available are:
     
-Encoders:
-
+Encoders: 
+```python
     text2bin(text)
     text2oct(text)
     text2hex(text)
     text2atbash(text)
     text2caesar(text, shift)
     text2railfence(text, key=3)
+ ```
 Decoders:
-
+ ```python
     bin2text(binary_text)
     oct2text(oct_text)
     hex2text(hex_text)
@@ -32,3 +33,5 @@ Decoders:
     caesarBruteforce(encrypted_text)
     railfence2text(cipher, key=3)
     reverse(text)
+ ```
+    
