@@ -1,37 +1,49 @@
-# dcoder 0.0.3
-This is the source code of "dcoder" which a python module that can decode/encode text in various ciphers. Current Version: 0.0.3
+# dcoder 0.1.0
+This is the source code of "dcoder" which a python module that provides various functions decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
 
 PyPI: https://pypi.org/project/dcoder/
 
+
 ## Installation
 
-
 **Stable Release:** `pip install dcoder`<br>
-**Development Head:** `pip install git+https://github.com/CodeWithSwastik/dcoder.git`
+**Working Version:** `pip install git+https://github.com/CodeWithSwastik/dcoder.git`
 
 
 ## Usage:
 
 The current list of functions available are:
     
-Encoders: 
+Encoding: 
 ```python
 text2bin(text)
 text2oct(text)
 text2hex(text)
-text2atbash(text)
-text2caesar(text, shift)
-text2railfence(text, key=3)
+text2ascii(text)
  ```
-Decoders:
+Decoding:
  ```python
 bin2text(binary_text)
 oct2text(oct_text)
 hex2text(hex_text)
+ascii2text(ascii_text)
+```
+Encryption:
+ ```python
+text2atbash(text)
+text2caesar(text, shift = 3)
+text2railfence(text, key=3)
+```
+Decryption:
+ ```python
 atbash2text(encrypted_text)
-caesar2text(encrypted_text, shift)
+caesar2text(encrypted_text, shift = 3)
 caesarBruteforce(encrypted_text)
 railfence2text(cipher, key=3)
+```
+
+Misc:
+```python
 reverse(text)
 ```
     
