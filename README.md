@@ -1,14 +1,18 @@
 # dcoder 0.0.3
-This is the source code of "dcoder" which a python module that can decode/encode text in various ciphers.
-
-Use "pip install dcoder" and try it out yourself :)
+This is the source code of "dcoder" which a python module that can decode/encode text in various ciphers. Current Version: 0.0.3
 
 PyPI: https://pypi.org/project/dcoder/
-Current Version: 0.0.3
+
+## Installation
+
+
+**Stable Release:** `pip install dcoder`<br>
+**Development Head:** `pip install git+https://github.com/CodeWithSwastik/dcoder.git`
+
 
 ## Usage:
 
-Current commands available are:
+The current list of functions available are:
     
 Encoders:
 
