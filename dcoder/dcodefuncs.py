@@ -1,31 +1,38 @@
 import string
 
 def bin2text(binary_text):
-	ascii_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
-	return ascii_string 
+	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
+	return plain_string 
 
 def text2bin(text):
 	bin_string = " ".join(format(ord(x), 'b') for x in text)
 	return bin_string 
 
 def oct2text(oct_text):
-	ascii_string = ''.join([chr(int(''.join(x), 8)) for x in oct_text.split(" ")])
-	return ascii_string 	
+	plain_string = ''.join([chr(int(''.join(x), 8)) for x in oct_text.split(" ")])
+	return plain_string 	
 
 def text2oct(text):
 	oct_string = " ".join(format(ord(x), "o") for x in text)
 	return oct_string 
 
 def hex2text(hex_text):
-	ascii_string = ''.join([chr(int(''.join(x), 16)) for x in hex_text.split(" ")])
-	return ascii_string 	
+	plain_string = ''.join([chr(int(''.join(x), 16)) for x in hex_text.split(" ")])
+	return plain_string 	
 
 def text2hex(text):
 	hex_string = " ".join(format(ord(x), "x") for x in text)
 	return hex_string 
 
+def text2ascii(text):
+	ascii_string = " ".join(format(ord(x))  for x in text)
+	return ascii_string
 
-def text2caesar(text,shift): 
+def ascii2text(ascii_text):
+	plain_string = ''.join([chr(int(''.join(x))) for x in ascii_text.split(" ")])
+	return plain_string
+
+def text2caesar(text,shift = 3): 
 	result = "" 
  
 	for i in range(len(text)): 
@@ -39,7 +46,7 @@ def text2caesar(text,shift):
 			result += char
 	return result 
 
-def caesar2text(encrypted_text,shift):
+def caesar2text(encrypted_text,shift = 3):
 	translated = ""
 
 	for symbol in encrypted_text:
@@ -175,4 +182,3 @@ def railfence2text(cipher, key = 3):
 		else: 
 			row -= 1
 	return "".join(result)
-
