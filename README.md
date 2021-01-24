@@ -12,6 +12,7 @@ Current commands available are:
 Encoders:
 
     text2bin(text)
+    text2oct(text)
     text2hex(text)
     text2atbash(text)
     text2caesar(text, shift)
@@ -19,6 +20,7 @@ Encoders:
 Decoders:
 
     bin2text(binary_text)
+    oct2text(oct_text)
     hex2text(hex_text)
     atbash2text(encrypted_text)
     caesar2text(encrypted_text, shift)
