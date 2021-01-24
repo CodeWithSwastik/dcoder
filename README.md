@@ -6,6 +6,9 @@ PyPI: https://pypi.org/project/dcoder/
 
 ## Installation
 
+You can install released versions of dcoder from the Python Package Index with pip or a similar tool:
+
+
 **Stable Release:** `pip install dcoder`<br>
 **Working Version:** `pip install git+https://github.com/CodeWithSwastik/dcoder.git`
 
@@ -32,14 +35,14 @@ Encryption:
  ```python
 text2atbash(text)
 text2caesar(text, shift = 3)
-text2railfence(text, key=3)
+text2railfence(text, key = 3)
 ```
 Decryption:
  ```python
 atbash2text(encrypted_text)
 caesar2text(encrypted_text, shift = 3)
 caesarBruteforce(encrypted_text)
-railfence2text(cipher, key=3)
+railfence2text(cipher, key = 3)
 ```
 
 Misc:
