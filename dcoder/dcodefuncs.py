@@ -33,7 +33,7 @@ def bin2text(binary_text):
 
 	#Converts the bin to text
 	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
-	return plain_str 
+	return plain_string
 
 
 def oct2text(oct_text):
