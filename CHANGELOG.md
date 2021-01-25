@@ -1,5 +1,4 @@
 CHANGE LOG
-
 ==========
 
 0.0.1 (23/01/2021)
@@ -18,3 +17,8 @@ CHANGE LOG
 -------------------
 - Fixed Bugs
 - Added functions for encoding/decoding text in ascii.
+
+0.1.1 (25/01/2021)
+-------------------
+- Reorganized the code and added comments
+- Added 2 misc functions
