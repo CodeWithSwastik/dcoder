@@ -1,5 +1,8 @@
 import string
 
+
+#Encoding/Decoding
+
 def bin2text(binary_text):
 	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
 	return plain_string 
@@ -31,6 +34,10 @@ def text2ascii(text):
 def ascii2text(ascii_text):
 	plain_string = ''.join([chr(int(''.join(x))) for x in ascii_text.split(" ")])
 	return plain_string
+
+
+
+#Encryption/Decryption
 
 def text2caesar(text,shift = 3): 
 	result = "" 
@@ -93,9 +100,6 @@ def atbash2text(encrypted_text):
 
 def text2atbash(text):
 	return atbash2text(text)
-
-def reverse(text):
-	return text[::-1]
 
 def text2railfence(text, key = 3): 
 
@@ -182,3 +186,11 @@ def railfence2text(cipher, key = 3):
 		else: 
 			row -= 1
 	return "".join(result)
+
+
+
+#Misc 
+
+def reverse(text):
+	''' Reverses the text in the arguement '''
+	return text[::-1]
