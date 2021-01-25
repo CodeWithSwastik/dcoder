@@ -9,7 +9,7 @@ classifiers = [
 
 setup(
   name='dcoder',
-  version='0.1.1',
+  version='0.1.2',
   description='A module that can decode/encode text in various ciphers.',
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.md').read(),
   long_description_content_type = "text/markdown",
