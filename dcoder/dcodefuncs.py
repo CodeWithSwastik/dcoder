@@ -194,3 +194,30 @@ def railfence2text(cipher, key = 3):
 def reverse(text):
 	''' Reverses the text in the arguement '''
 	return text[::-1]
+
+def capitalLettersCipher(ciphertext):
+	""" 
+
+	Returns the capital letters in the ciphertext
+
+	Example:
+
+	Cipher Text:
+	dogs are cuter than HorsEs in a LooP. 
+
+	Decoded Text: HELP """  
+
+	return "".join([i for i in ciphertext if i.isupper()])
+
+def firstLetterCipher(ciphertext):
+	""" 
+	Returns the first letters of each word in the ciphertext
+
+	Example:
+
+	Cipher Text: Horses evertime look positive
+	Decoded text: Help """  
+
+	return "".join([i[0] for i in ciphertext.split(" ")])
+
+
