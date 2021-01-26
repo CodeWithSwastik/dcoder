@@ -31,9 +31,11 @@ def bin2text(binary_text):
 	if not " " in binary_text and len(binary_text)>8:
 		raise ValueError(noSpaceError.format("binary_text"))
 
+	binary_text = binary_text.strip()
+
 	#Converts the bin to text
 	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
-	return plain_string
+	return plain_string 
 
 
 def oct2text(oct_text):
@@ -41,6 +43,8 @@ def oct2text(oct_text):
 	#Raise exception if there are no spaces in the text
 	if not " " in oct_text and len(oct_text)>3:
 		raise ValueError(noSpaceError.format("oct_text"))
+
+	oct2text = oct2text.strip()
 
 	#Converts the oct to text
 	plain_string = ''.join([chr(int(''.join(x), 8)) for x in oct_text.split(" ")])
@@ -52,6 +56,8 @@ def hex2text(hex_text):
 	if not " " in hex_text and len(hex_text)>2:
 		raise ValueError(noSpaceError.format("hex_text"))
 
+	hex_text = hex_text.strip()
+
 	#Converts the hex to text
 	plain_string = ''.join([chr(int(''.join(x), 16)) for x in hex_text.split(" ")])
 	return plain_string 	
@@ -61,6 +67,8 @@ def ascii2text(ascii_text):
 	#Raise exception if there are no spaces in the text
 	if not " " in ascii_text and len(ascii_text)>3:
 		raise ValueError(noSpaceError.format("ascii_text"))
+
+	ascii2text = ascii2text.strip()
 
 	#Converts the ascii to plain text
 	plain_string = ''.join([chr(int(''.join(x))) for x in ascii_text.split(" ")])
@@ -251,5 +259,7 @@ def firstLetterCipher(ciphertext):
 
 	Cipher Text: Horses evertime look positive
 	Decoded text: Help """  
+
+	ciphertext = ciphertext.strip()
 
 	return "".join([i[0] for i in ciphertext.split(" ")])
