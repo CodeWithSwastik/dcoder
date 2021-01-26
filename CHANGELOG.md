@@ -1,11 +1,14 @@
 CHANGE LOG
 ==========
 
+0.1.3 (26/01/2021)
+-------------------
+- Minor bug fixes
+
 0.1.2 (25/01/2021)
 -------------------
 - Minor bug fixes
 - Reorganized the code and added appropriate comments
-
 
 0.1.1 (25/01/2021)
 -------------------
