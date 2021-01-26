@@ -1,6 +1,9 @@
 import string
 
 class Misc:
+    def __init__(self):
+        self.noSpaceError = "No spaces were found in the {}. The output might be not be correct if the input text is not correctly formatted."
+
     def reverse(self,text):
         ''' Reverses the text in the arguement '''
         return text[::-1]
