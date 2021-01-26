@@ -97,6 +97,8 @@ def text2atbash(text):
 
 def text2railfence(text, key = 3): 
 
+	text = text.replace("\n", "")
+
 	rail = [['\n' for i in range(len(text))] 
 				  for j in range(key)] 
 	  
@@ -176,6 +178,8 @@ def atbash2text(encrypted_text):
 	return translated
 
 def railfence2text(cipher, key = 3): 
+
+	cipher = cipher.replace("\n", "")
 
 	rail = [['\n' for i in range(len(cipher))]  
 				  for j in range(key)] 
