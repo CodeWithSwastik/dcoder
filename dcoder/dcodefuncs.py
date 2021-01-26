@@ -154,13 +154,13 @@ def caesar2text(encrypted_text,shift = 3):
 	return translated
 
 def caesarBruteforce(encrypted_text):  
-	posibilities = []
+	possibilities = []
 
 	for shift in range(26):
 		decoded = caesar2text(encrypted_text,shift)
-		posibilities.append(decoded)
+		possibilities.append(decoded)
 
-	return posibilities
+	return possibilities
 
 def atbash2text(encrypted_text):
 	translated = ""
@@ -239,7 +239,7 @@ def railfence2text(cipher, key = 3):
 #Misc 
 
 def reverse(text):
-	''' Reverses the text in the arguement '''
+	''' Reverses the text in the argument '''
 	return text[::-1]
 
 def capitalLettersCipher(ciphertext):
