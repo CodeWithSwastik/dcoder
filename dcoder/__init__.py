@@ -6,7 +6,7 @@ __summary__ = (
 )
 __uri__ = "https://github.com/CodeWithSwastik/dcoder"
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 __author__ = "Swas.py"
 __email__ = "cwswas.py@gmail.com"
