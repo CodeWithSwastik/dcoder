@@ -44,7 +44,7 @@ def oct2text(oct_text):
 	if not " " in oct_text and len(oct_text)>3:
 		raise ValueError(noSpaceError.format("oct_text"))
 
-	oct2text = oct2text.strip()
+	oct_text = oct_text.strip()
 
 	#Converts the oct to text
 	plain_string = ''.join([chr(int(''.join(x), 8)) for x in oct_text.split(" ")])
@@ -68,7 +68,7 @@ def ascii2text(ascii_text):
 	if not " " in ascii_text and len(ascii_text)>3:
 		raise ValueError(noSpaceError.format("ascii_text"))
 
-	ascii2text = ascii2text.strip()
+	ascii_text = ascii_text.strip()
 
 	#Converts the ascii to plain text
 	plain_string = ''.join([chr(int(''.join(x))) for x in ascii_text.split(" ")])
