@@ -1,9 +1,7 @@
 import string
 
 #Decoding
-
 noSpaceError = "No spaces were found in the {}. The output might be not be correct if the input text is not correctly formatted."
-
 
 def bin2text(binary_text):
 
@@ -16,7 +14,6 @@ def bin2text(binary_text):
 	#Converts the bin to text
 	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
 	return plain_string 
-
 
 def oct2text(oct_text):
 
@@ -55,9 +52,7 @@ def ascii2text(ascii_text):
 	return plain_string
 
 
-
 #Decryption
-
 def caesar2text(encrypted_text,shift = 3):
 	translated = ""
 
@@ -173,7 +168,6 @@ def railfenceBruteforce(encrypted_text):
 	return possibilities
 
 #Misc 
-
 def reverse(text):
 	''' Reverses the text in the argument '''
 	return text[::-1]
