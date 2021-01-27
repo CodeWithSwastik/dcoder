@@ -240,7 +240,7 @@ def railfenceBruteforce(encrypted_text):
 
 	n = len(encrypted_text)
 
-	for key in range(2,n+1):
+	for key in range(2,n):
 		decoded = railfence2text(encrypted_text,key)
 		possibilities.append(decoded)
 
