@@ -1,6 +1,12 @@
 CHANGE LOG
 ==========
 
+
+0.2.0 (27/01/2021)
+-------------------
+- Added railfenceBruteforce()
+- Bug fixes
+
 0.1.4 (26/01/2021)
 -------------------
 - Minor bug fixes
