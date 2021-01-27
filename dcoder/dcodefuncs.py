@@ -234,7 +234,17 @@ def railfence2text(cipher, key = 3):
 			row -= 1
 	return "".join(result)
 
+def railfenceBruteforce(encrypted_text):  
 
+	possibilities = []
+
+	n = len(encrypted_text)
+
+	for key in range(2,n+1):
+		decoded = railfence2text(encrypted_text,key)
+		possibilities.append(decoded)
+
+	return possibilities
 
 #Misc 
 
