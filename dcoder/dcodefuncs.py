@@ -1,31 +1,10 @@
 import string
 
-
-#Encoding
-
-def text2bin(text):
-	bin_string = " ".join(format(ord(x), 'b') for x in text)
-	return bin_string
-
-def text2oct(text):
-	oct_string = " ".join(format(ord(x), "o") for x in text)
-	return oct_string 
-
-def text2hex(text):
-	hex_string = " ".join(format(ord(x), "x") for x in text)
-	return hex_string 
-
-def text2ascii(text):
-	ascii_string = " ".join(format(ord(x))  for x in text)
-	return ascii_string
-
-
 #Decoding
-
 noSpaceError = "No spaces were found in the {}. The output might be not be correct if the input text is not correctly formatted."
 
-
 def bin2text(binary_text):
+	""" Takes in a string binary_text, returns the decoded plain text."""
 
 	#Raise exception if there are no spaces in the text
 	if not " " in binary_text and len(binary_text)>8:
@@ -37,8 +16,9 @@ def bin2text(binary_text):
 	plain_string = "".join([chr(int(x, 2)) for x in binary_text.split(" ")])
 	return plain_string 
 
-
 def oct2text(oct_text):
+	""" Takes in a string oct_text, returns the decoded plain text."""
+
 
 	#Raise exception if there are no spaces in the text
 	if not " " in oct_text and len(oct_text)>3:
@@ -51,6 +31,7 @@ def oct2text(oct_text):
 	return plain_string 	
 
 def hex2text(hex_text):
+	""" Takes in a string hex_text, returns the decoded plain text."""
 
 	#Raise exception if there are no spaces in the text
 	if not " " in hex_text and len(hex_text)>2:
@@ -63,6 +44,7 @@ def hex2text(hex_text):
 	return plain_string 	
 
 def ascii2text(ascii_text):
+	""" Takes in a string ascii_text, returns the decoded plain text."""
 
 	#Raise exception if there are no spaces in the text
 	if not " " in ascii_text and len(ascii_text)>3:
@@ -75,64 +57,18 @@ def ascii2text(ascii_text):
 	return plain_string
 
 
-
-#Encryption
-
-def text2caesar(text,shift = 3): 
-	result = "" 
- 
-	for i in range(len(text)): 
-		char = text[i] 
-  
-		if char.isupper(): 
-			result += chr((ord(char) + shift-65) % 26 + 65) 
-		elif char.islower(): 
-			result += chr((ord(char) + shift - 97) % 26 + 97) 
-		else:
-			result += char
-	return result 
-
-def text2atbash(text):
-	return atbash2text(text)
-
-def text2railfence(text, key = 3): 
-
-	text = text.replace("\n", "")
-
-	rail = [['\n' for i in range(len(text))] 
-				  for j in range(key)] 
-	  
-	dir_down = False
-	row, col = 0, 0
-	  
-	for i in range(len(text)): 
-		  
- 
-		if (row == 0) or (row == key - 1): 
-			dir_down = not dir_down 
-		  
-
-		rail[row][col] = text[i] 
-		col += 1
-		   
-		if dir_down: 
-			row += 1
-		else: 
-			row -= 1
-
-	result = [] 
-	for i in range(key): 
-		for j in range(len(text)): 
-			if rail[i][j] != '\n': 
-				result.append(rail[i][j]) 
-	return "" . join(result) 
-	  
-
-
-
 #Decryption
-
 def caesar2text(encrypted_text,shift = 3):
+	"""
+	Returns the decrypted text after decrypting the encrypted_text
+
+		Parameters:
+			encrypted_text (str): The encrypted text in Caesar's cipher
+			shift (int): The shift that should be used to decrypt the text 
+
+		Returns:
+			translated (str): The decrypted text
+	"""
 	translated = ""
 
 	for symbol in encrypted_text:
@@ -154,6 +90,15 @@ def caesar2text(encrypted_text,shift = 3):
 	return translated
 
 def caesarBruteforce(encrypted_text):  
+	"""
+	Returns a list of all the possibilities after decrypting the encrypted_text without using a shift.
+
+		Parameters:
+			encrypted_text (str): The encrypted text in Caesar's cipher
+
+		Returns:
+			possibilities (list): All the possibilities of decryption
+	"""
 	possibilities = []
 
 	for shift in range(26):
@@ -163,6 +108,16 @@ def caesarBruteforce(encrypted_text):
 	return possibilities
 
 def atbash2text(encrypted_text):
+	"""
+	Returns the decrypted text after decrypting the encrypted_text
+
+		Parameters:
+			encrypted_text (str): The encrypted text in Atbash cipher
+
+		Returns:
+			translated (str): The decrypted text
+	"""
+
 	translated = ""
 
 	for s in encrypted_text:
@@ -178,6 +133,16 @@ def atbash2text(encrypted_text):
 	return translated
 
 def railfence2text(cipher, key = 3): 
+	"""
+	Returns the decrypted text after decrypting the encrypted_text.
+
+		Parameters:
+			encrypted_text (str): The encrypted text in railfence cipher
+			key (int): The Key or the height of the rails 
+
+		Returns:
+			translated (str): The decrypted text
+	"""
 
 	cipher = cipher.replace("\n", "")
 
@@ -234,12 +199,29 @@ def railfence2text(cipher, key = 3):
 			row -= 1
 	return "".join(result)
 
+def railfenceBruteforce(encrypted_text):  
+	"""
+	Returns a list of all the possibilities after decrypting the encrypted_text without using a shift.
 
+		Parameters:
+			encrypted_text (str): The encrypted text in Railfence Cipher
+
+		Returns:
+			possibilities (list): All the possibilities of decryption
+	"""
+	possibilities = []
+
+	n = len(encrypted_text)
+
+	for key in range(2,n):
+		decoded = railfence2text(encrypted_text,key)
+		possibilities.append(decoded)
+
+	return possibilities
 
 #Misc 
-
 def reverse(text):
-	''' Reverses the text in the argument '''
+	''' Takes in a string text, returns the text reversed'''
 	return text[::-1]
 
 def capitalLettersCipher(ciphertext):
@@ -247,23 +229,40 @@ def capitalLettersCipher(ciphertext):
 
 	Returns the capital letters in the ciphertext
 
-	Example:
+		Parameters:
+			ciphertext (str): The encrypted text
 
-	Cipher Text: dogs are cuter than HorsEs in a LooP. 
-	Decoded Text: HELP """  
+		Returns:
+			plaintext (str): The decrypted text
 
-	return "".join([i for i in ciphertext if i.isupper()])
+		Example:
 
+			Cipher Text: dogs are cuter than HorsEs in a LooP. 
+
+			Decoded Text: HELP """  
+
+
+	plaintext = "".join([i for i in ciphertext if i.isupper()])
+	return plaintext
 
 def firstLetterCipher(ciphertext):
 	""" 
 	Returns the first letters of each word in the ciphertext
 
-	Example:
+		Parameters:
+			ciphertext (str): The encrypted text
 
-	Cipher Text: Horses evertime look positive
-	Decoded text: Help """  
+		Returns:
+			plaintext (str): The decrypted text
+
+		Example:
+
+			Cipher Text: Horses evertime look positive
+
+			Decoded text: Help
+	"""  
 
 	ciphertext = ciphertext.strip()
 
-	return "".join([i[0] for i in ciphertext.split(" ")])
+	plaintext = "".join([i[0] for i in ciphertext.split(" ")])
+	return plaintext

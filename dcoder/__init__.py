@@ -1,4 +1,5 @@
 from .dcodefuncs import *
+from .encodefuncs import *
 
 __title__ = "dcoder"
 __summary__ = (
@@ -6,7 +7,7 @@ __summary__ = (
 )
 __uri__ = "https://github.com/CodeWithSwastik/dcoder"
 
-__version__ = "0.1.4"
+__version__ = "0.2.0"
 
 __author__ = "Swas.py"
 __email__ = "cwswas.py@gmail.com"

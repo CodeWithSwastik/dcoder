@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Functions for Decoding &mdash; dcoder 0.2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functions for Encoding" href="encodefuncs.html" />
+    <link rel="prev" title="Dcoder" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> dcoder
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documenation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Functions for Decoding</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="encodefuncs.html">Functions for Encoding</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">dcoder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Functions for Decoding</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/dcodefuncs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="functions-for-decoding">
+<h1>Functions for Decoding<a class="headerlink" href="#functions-for-decoding" title="Permalink to this headline">¶</a></h1>
+<p>This section of this documentation contains information on functions for decoding and decrypting.</p>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-dcoder.dcodefuncs"></span><dl class="py function">
+<dt id="dcoder.dcodefuncs.ascii2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">ascii2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ascii_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.ascii2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a string ascii_text, returns the decoded plain text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.atbash2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">atbash2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encrypted_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.atbash2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decrypted text after decrypting the encrypted_text</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in Atbash cipher</p>
+</dd>
+<dt>Returns:</dt><dd><p>translated (str): The decrypted text</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.bin2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">bin2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">binary_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.bin2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a string binary_text, returns the decoded plain text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.caesar2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">caesar2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encrypted_text</span></em>, <em class="sig-param"><span class="n">shift</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.caesar2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decrypted text after decrypting the encrypted_text</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in Caesar’s cipher
+shift (int): The shift that should be used to decrypt the text</p>
+</dd>
+<dt>Returns:</dt><dd><p>translated (str): The decrypted text</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.caesarBruteforce">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">caesarBruteforce</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encrypted_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.caesarBruteforce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the possibilities after decrypting the encrypted_text without using a shift.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in Caesar’s cipher</p>
+</dd>
+<dt>Returns:</dt><dd><p>possibilities (list): All the possibilities of decryption</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.capitalLettersCipher">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">capitalLettersCipher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ciphertext</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.capitalLettersCipher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the capital letters in the ciphertext</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>ciphertext (str): The encrypted text</p>
+</dd>
+<dt>Returns:</dt><dd><p>plaintext (str): The decrypted text</p>
+</dd>
+</dl>
+<p>Example:</p>
+<blockquote>
+<div><p>Cipher Text: dogs are cuter than HorsEs in a LooP.</p>
+<p>Decoded Text: HELP</p>
+</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.firstLetterCipher">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">firstLetterCipher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ciphertext</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.firstLetterCipher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first letters of each word in the ciphertext</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>ciphertext (str): The encrypted text</p>
+</dd>
+<dt>Returns:</dt><dd><p>plaintext (str): The decrypted text</p>
+</dd>
+</dl>
+<p>Example:</p>
+<blockquote>
+<div><p>Cipher Text: Horses evertime look positive</p>
+<p>Decoded text: Help</p>
+</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.hex2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">hex2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hex_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.hex2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a string hex_text, returns the decoded plain text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.oct2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">oct2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">oct_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.oct2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a string oct_text, returns the decoded plain text.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.railfence2text">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">railfence2text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cipher</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.railfence2text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decrypted text after decrypting the encrypted_text.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in railfence cipher
+key (int): The Key or the height of the rails</p>
+</dd>
+<dt>Returns:</dt><dd><p>translated (str): The decrypted text</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.railfenceBruteforce">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">railfenceBruteforce</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encrypted_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.railfenceBruteforce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the possibilities after decrypting the encrypted_text without using a shift.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in Railfence Cipher</p>
+</dd>
+<dt>Returns:</dt><dd><p>possibilities (list): All the possibilities of decryption</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="dcoder.dcodefuncs.reverse">
+<code class="sig-prename descclassname">dcoder.dcodefuncs.</code><code class="sig-name descname">reverse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dcoder.dcodefuncs.reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a string text, returns the text reversed</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="encodefuncs.html" class="btn btn-neutral float-right" title="Functions for Encoding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Dcoder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Swas.py.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
