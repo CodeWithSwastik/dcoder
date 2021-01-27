@@ -1,5 +1,5 @@
 # dcoder 0.2.0
-=======
+
 
 This is the source code of "dcoder" which a python module that provides various functions for decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
 
