@@ -2,6 +2,7 @@
 
 dcoder is a python module that provides various functions for decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
 
+
 PyPI: https://pypi.org/project/dcoder/ <br>
 Docs: https://dcoder.readthedocs.io/en/latest/
 
