@@ -3,18 +3,26 @@ import string
 #Encoding
 
 def text2bin(text):
+	""" Takes in a string text, returns the encoded text in bin."""
+
 	bin_string = " ".join(format(ord(x), 'b') for x in text)
 	return bin_string
 
 def text2oct(text):
+	""" Takes in a string text, returns the encoded text in oct."""
+
 	oct_string = " ".join(format(ord(x), "o") for x in text)
 	return oct_string 
 
 def text2hex(text):
+	""" Takes in a string text, returns the encoded text in hex."""
+
 	hex_string = " ".join(format(ord(x), "x") for x in text)
 	return hex_string 
 
 def text2ascii(text):
+	""" Takes in a string text, returns the encoded text in ascii."""
+
 	ascii_string = " ".join(format(ord(x))  for x in text)
 	return ascii_string
 
@@ -22,6 +30,16 @@ def text2ascii(text):
 #Encryption
 
 def text2caesar(text,shift = 3): 
+	"""
+	Returns the encrypted text after encrypting the text with the given shift
+
+		Parameters:
+			text (str): The text that needs to be encrypted in Caesar's cipher
+			shift (int): The shift that should be used to encrypt the text 
+
+		Returns:
+			result (str): The encrypted text
+	"""
 	result = "" 
  
 	for i in range(len(text)): 
@@ -36,6 +54,15 @@ def text2caesar(text,shift = 3):
 	return result 
 
 def text2atbash(text):
+	"""
+	Returns the encrypted text after encrypting the text
+
+		Parameters:
+			text (str): The text that needs to be encrypted in the Atbash cipher
+
+		Returns:
+			translated (str): The encrypted text
+	"""
 	translated = ""
 
 	for s in text:
@@ -51,7 +78,16 @@ def text2atbash(text):
 	return translated
 
 def text2railfence(text, key = 3): 
+	"""
+	Returns the encrypted text after encrypting the text with the given key
 
+		Parameters:
+			text (str): The text that needs to be encrypted in the Railfence cipher
+			key (int): The Key that should be used to encrypt the text 
+
+		Returns:
+			encrypted (str): The encrypted text
+	"""
 	text = text.replace("\n", "")
 
 	rail = [['\n' for i in range(len(text))] 
@@ -80,6 +116,8 @@ def text2railfence(text, key = 3):
 		for j in range(len(text)): 
 			if rail[i][j] != '\n': 
 				result.append(rail[i][j]) 
-	return "" . join(result) 
+				
+	encrypted = "".join(result) 
+	return encrypted
 	  
 
