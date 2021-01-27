@@ -3,6 +3,7 @@ from setuptools import setup, find_packages
 classifiers = [
   'Development Status :: 5 - Production/Stable',
   'Intended Audience :: Developers',
+  'Operating System :: OS Independent',
   'License :: OSI Approved :: MIT License',
   'Programming Language :: Python :: 3'
 ]
@@ -13,7 +14,11 @@ setup(
   description='A module that can decode/encode text in various ciphers.',
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.md').read(),
   long_description_content_type = "text/markdown",
-  url = "https://github.com/CodeWithSwastik/dcoder",  
+  url = "https://github.com/CodeWithSwastik/dcoder", 
+  project_urls={
+   "Documentation": "https://dcoder.readthedocs.io/en/latest/",
+   "Issue tracker": "https://github.com/CodeWithSwastik/dcoder/issues",
+   },
   author='Swas.py',
   author_email='cwswas.py@gmail.com',
   license='MIT', 
