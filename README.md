@@ -1,6 +1,6 @@
-# dcoder 0.2.0
+# dcoder 0.2.1
 
-This is the source code of "dcoder" which a python module that provides various functions for decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
+dcoder is a python module that provides various functions for decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
 
 PyPI: https://pypi.org/project/dcoder/ <br>
 Docs: https://dcoder.readthedocs.io/en/latest/
