@@ -1,4 +1,6 @@
 # dcoder 0.2.1
+[![Downloads](https://static.pepy.tech/personalized-badge/dcoder?period=total&units=international_system&left_color=brightgreen&right_color=orange&left_text=Downloads)](https://pepy.tech/project/dcoder)
+
 
 dcoder is a python module that provides various functions for decoding/encoding text. It also has functions for encrypting or decrypting text in various ciphers.
 
